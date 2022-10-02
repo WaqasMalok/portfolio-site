@@ -4,27 +4,31 @@
     box-sizing: border-box;
     font-family: 'josefin sana', sans-serif;
 }
-body{
+
+body {
     scroll-behavior: smooth;
 }
+
 .hero {
     height: 100vh;
     width: 100%;
     background-image: url(img/hero.jpg);
     background-size: cover;
-    background-position: center;   
-   
+    background-position: center;
+
 }
-:root{
+
+:root {
     /* TEXT COLOR */
-    --pink--text:#f9004d;
+    --pink--text: #f9004d;
 
     /* background-color */
-    --bg-white-50:rgba(255, 255, 255, 0.904);
+    --bg-white-50: rgba(255, 255, 255, 0.904);
 
 }
+
 /* BUTTONS  */
-.button{
+.button {
     background-color: #f9004d;
     color: #fff;
     text-decoration: none;
@@ -34,25 +38,30 @@ body{
     border-radius: 30px;
     transition: .3s;
 }
-.button:hover{
+
+.button:hover {
     background-color: transparent;
     border: 2px solid #f9004d;
     cursor: pointer;
 }
+
 /* nav scroll function  */
 /* ####################  */
 .bg {
-    background: var(--bg-white-50); 
+    background: var(--bg-white-50);
     z-index: 999;
-}    
-.bg .logo{
+}
+
+.bg .logo {
     color: #000;
 }
-.bg .list li a{
+
+.bg .list li a {
     color: #000;
-    
+
 }
-.bg .button{
+
+.bg .button {
     background-color: #000;
 }
 
@@ -60,7 +69,7 @@ body{
     color: var(--pink--text);
 }
 
-nav { 
+nav {
     width: 100%;
     display: flex;
     align-items: center;
@@ -69,7 +78,7 @@ nav {
     padding-bottom: 15px;
     padding-left: 5%;
     padding-right: 5%;
-    transition: 0.7s; 
+    transition: 0.7s;
     position: fixed;
 }
 
@@ -90,8 +99,9 @@ nav li a:hover::after {
     transform: scale(1, 1);
     background-color: #f9004d;
 }
+
 nav li a:hover {
-   color: #f9004d;
+    color: #f9004d;
 }
 
 .logo {
@@ -118,11 +128,12 @@ nav ul li a {
     text-decoration: none;
     font-size: 12px;
     text-transform: capitalize;
-} 
+}
+
 .content {
     position: absolute;
     top: 35%;
-    left: 35%; 
+    left: 35%;
     text-align: center;
 }
 
@@ -151,14 +162,17 @@ h4 {
     position: relative;
     margin: auto;
 }
-#inputbtn{
+
+#inputbtn {
     cursor: pointer;
 }
-#inputbtn:hover{
+
+#inputbtn:hover {
     box-shadow: 0px 0px 3px rgb(0, 0, 0), 0px 0px 5px #858585;
 
 
 }
+
 .newslatter form input:first-child {
     display: inline-block;
     width: 100%;
@@ -199,14 +213,13 @@ h4 {
 }
 
 /* #################  */
- 
+
 .main {
     width: 1130px;
     max-width: 95%;
     margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .about-text h2 {
@@ -264,24 +277,24 @@ button:hover {
     text-align: center;
 }
 
-.box {  
+.box {
     width: 1250px;
     max-width: 100%;
     margin: auto;
     padding: 50px 0px;
     display: grid;
-    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
-.card { 
+.card {
     padding: 20px 35px;
     background: #191919;
     border-radius: 20px;
-    margin: 15px;   
+    margin: 15px;
     overflow: hidden;
-    text-align: center; 
+    text-align: center;
 }
- 
+
 .card i {
     font-size: 50px;
     display: block;
@@ -304,40 +317,94 @@ h5 {
     margin-bottom: 25px;
 }
 
- 
+
 
 .contect-me {
     width: 100%;
-    height: 290px;
+    height: 100%;
     background: #191919;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    padding: 70px 0px;
+    background-image: url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+.contect-me .button{
+    z-index: 3;
+
+}
+.contect-me::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.603);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 1;
+
 }
 
 .contect-me p {
     color: #fff;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+    z-index: 3;
+
 }
 
-.contect-me .button-tow {
-    background-color: #f9004d;
+.contact-form {
+    padding: 80px;
+    width: 100%;
+    max-width: 800px;
+    z-index: 3;
+    background-color: #f9004f10;
+    margin-bottom: 30px;
+    border: 1px solid #f9004d;
+    border-radius: 20px;
+}
+
+.form-ul li {
+    list-style: none;
+    width: 100%;
+}
+
+.form-ul li label {
     color: #fff;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 13px 30px;
-    border-radius: 30px;
-    transition: .3s;
+    margin-left: 5px;
 }
 
-.contect-me .button-tow:hover {
+.form-ul li input {
+    margin: 3px 0px 30px 0px;
+    padding: 10px 10px;
+    width: 100%;
+    border-radius: 5px;
     background-color: transparent;
-    border: 2px solid #f9004d;
-    cursor: pointer;
+    border: 1px solid #f9004f;
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+
+}
+.form-ul li textarea {
+    margin: 5px 0px 0px 0px;
+    padding: 10px 10px;
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #f9004f;
+    color: #fff;
+    font-size: 1.3rem;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+
 }
 
 footer {
@@ -387,21 +454,23 @@ footer p:nth-child(2) {
     transition: all ease-in-out 0.3s;
     background-color: #fff;
 }
-.social a i{
+
+.social a i {
     font-size: 22px;
     color: #fff;
 
 }
-.social a:hover i{
-  color: #f9004d; 
+
+.social a:hover i {
+    color: #f9004d;
     transition: all ease-in-out 0.3s;
     transform: scale(1.1);
 
 }
+
 .end {
     position: absolute;
     color: #f9004d;
     bottom: 35px;
     font-size: 14px;
 }
- 
