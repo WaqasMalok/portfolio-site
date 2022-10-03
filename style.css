@@ -342,9 +342,6 @@ h5 {
     position: relative;
 }
 
-.contect-me .button {
-    z-index: 3;
-}
 
 .contect-me::before {
     content: "";
@@ -366,16 +363,33 @@ h5 {
 }
 
 .contact-form {
-    padding: 40px 80px;
+    padding: 40px 180px;
     width: 100%;
-    max-width: 800px;
+    max-width: 1100px;
     z-index: 3;
-    background-color: #f9004f10;
-    margin-bottom: 30px;
     border: 1px solid rgba(255, 255, 255, 0.774);
     border-radius: 20px;
+    background:
+	linear-gradient(
+		cyan,
+		transparent
+	),
+	linear-gradient(
+		-45deg,
+		magenta,
+		transparent
+	),
+	linear-gradient(
+		45deg,
+		yellow,
+		transparent
+	);
+background-blend-mode: multiply;
+background-attachment: fixed;
 }
-
+.form-ul{
+    margin-bottom: 60px;
+}
 .form-ul li {
     list-style: none;
     width: 100%;
@@ -421,6 +435,9 @@ textarea {
 footer {
     position: relative;
 
+}
+.contact-form .button {
+    z-index: 3;    
 }
 
 footer {
