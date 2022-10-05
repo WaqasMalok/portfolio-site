@@ -1,0 +1,27 @@
+@media(max-width:1150px){
+    .list{
+        display: none;
+    }
+}
+@media(max-width:800px){
+    .contact-form{
+        width: 90%;
+    }
+}
+@media(max-width:631px){
+    .content h4{
+        font-size: 16px;
+    }
+    .content h1{
+        font-size: 3.4rem;
+    }
+    .content h3{
+        font-size: 20px;
+    }
+    .about-text{
+        align-items: center;
+    }
+    .about-text{
+        text-align: center;
+    }
+}

@@ -45,18 +45,26 @@ span,
 .end {
     color: #f9004d;
 }
+
 /* color all white  */
-.button
-{
+.button,
+.logo,
+nav ul li a,
+h1,
+h3,
+.about-text h2,
+.about-text h5 {
     color: #fff;
 
 }
+
 /* color black  */
 .bg .list li a,
-.bg .logo  {
+.bg .logo {
     color: #000;
 
 }
+
 /* BUTTONS  */
 .button {
     text-decoration: none;
@@ -80,20 +88,28 @@ span,
 .contect-me,
 footer {
     max-width: 1800px;
+    min-width: 400px;
     margin: auto;
 }
 
 /* nav scroll function  */
 /* ####################  */
 .bg {
-    background: var(--bg-white-50);
+    background-color: var(--bg-white-50);
+    border-bottom: 5px solid #f9004f;
     z-index: 999;
+    transition: all 5s ease-in-out inherit;
 }
 
 
 
 .bg .button {
     background-color: #000;
+}
+
+.bg .button:hover {
+    background-color: transparent;
+    color: #f9004f;
 }
 
 .sticky nav a {
@@ -133,7 +149,6 @@ nav li a:hover::after {
 }
 
 .logo {
-    color: white;
     font-size: 20PX;
     white-space: nowrap;
     letter-spacing: 1px;
@@ -148,7 +163,6 @@ nav ul li {
 
 nav ul li a {
     background: none;
-    color: #ffff;
     text-decoration: none;
     font-size: 12px;
     text-transform: capitalize;
@@ -156,20 +170,18 @@ nav ul li a {
 
 .content {
     position: absolute;
-    top: 35%;
-    left: 35%;
+    top: 40%; 
+    width: 100%;
     text-align: center;
 }
 
 
 h1 {
-    color: white;
     margin: 20px 0px 20px;
     font-size: 75px;
 }
 
 h3 {
-    color: white;
     font-size: 25px;
     margin-bottom: 50px;
 }
@@ -230,6 +242,7 @@ h4 {
     width: 80%;
     max-width: 430px;
     border-radius: 90px;
+    margin: auto;
 }
 
 .about-text {
@@ -247,10 +260,11 @@ h4 {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+    justify-content: center;
 }
 
 .about-text h2 {
-    color: white;
     font-size: 75px;
     text-transform: capitalize;
     margin: 20px;
@@ -258,7 +272,6 @@ h4 {
 }
 
 .about-text h5 {
-    color: white;
     letter-spacing: 2px;
     font-size: 23px;
     margin-bottom: 25px;
@@ -282,7 +295,7 @@ h4 {
 .tittle h2 {
     color: #fff;
     font-size: 75px;
-    width: 1130px;
+    width: 1005;
     margin: 30px auto;
     text-align: center;
 }
@@ -294,13 +307,16 @@ h4 {
     padding: 50px 0px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    padding: 20px;
+    justify-items: center;
+    align-content: center;
 }
 
 .card {
     padding: 20px 35px;
     background: #191919;
     border-radius: 20px;
-    margin: 15px;
     overflow: hidden;
     text-align: center;
 }
@@ -362,34 +378,16 @@ h5 {
     z-index: 3;
 }
 
-.contact-form {
-    padding: 40px 180px;
-    width: 100%;
-    max-width: 1100px;
-    z-index: 3;
-    border: 1px solid rgba(255, 255, 255, 0.774);
-    border-radius: 20px;
-    background:
-	linear-gradient(
-		cyan,
-		transparent
-	),
-	linear-gradient(
-		-45deg,
-		magenta,
-		transparent
-	),
-	linear-gradient(
-		45deg,
-		yellow,
-		transparent
-	);
-background-blend-mode: multiply;
-background-attachment: fixed;
+.contact-form { 
+    margin-top: 60px;
+    width: 65%;
+    z-index: 3; 
 }
-.form-ul{
+
+.form-ul {
     margin-bottom: 60px;
 }
+
 .form-ul li {
     list-style: none;
     width: 100%;
@@ -411,12 +409,12 @@ background-attachment: fixed;
 textarea {
     font-family: sans-serif;
     font-size: 1.3rem;
-    border: none;
-    border-bottom: 1px solid #f9004f;
     color: #fff;
     letter-spacing: 2px;
     padding: 10px;
-
+border: none;
+box-shadow: 0px 0px 5px 1px #f9004fd7;
+border-radius: 20px;
 }
 
 .form-ul li textarea {
@@ -436,8 +434,9 @@ footer {
     position: relative;
 
 }
+
 .contact-form .button {
-    z-index: 3;    
+    z-index: 3;
 }
 
 footer {
@@ -459,8 +458,7 @@ footer p:nth-child(1) {
 
 footer p:nth-child(2) {
     color: #fff;
-    font-size: 17px;
-    width: 500px;
+    font-size: 17px; 
     text-align: center;
     line-height: 25px;
 }
