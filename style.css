@@ -103,35 +103,33 @@ footer {
     border-bottom: 5px solid #f9004f;
     z-index: 999;
     transition: all 5s ease-in-out inherit;
-}
-
-
-
-.bg .button {
-    background-color: #000;
+    position: fixed;
+} 
+.bg .button, #burger li{
+    background-color: #000; 
 }
 
 .bg .button:hover {
     background-color: transparent;
     color: #f9004f;
 }
-.bg #burgrt
+.bg #burger li {
+    background-color: #000;
+}
 
 .sticky nav a {
     color: var(--pink--text);
 }
 
-nav {
+.navi {
     width: 100%;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 15px;
-    padding-bottom: 15px;
     padding-left: 5%;
     padding-right: 5%;
-    transition: 0.9s;
-    position: fixed;
+    transition: 0.9s; 
     max-width: 1800px;
     margin: auto;
 }
@@ -387,8 +385,7 @@ h5 {
     margin: 16px;
     line-height: 24px;
     margin-bottom: 25px;
-}
-
+} 
 .contect-me {
     width: 100%;
     height: 100%;

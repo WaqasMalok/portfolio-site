@@ -4,3 +4,4 @@ window.addEventListener('scroll', ()=>{
     let content = document.querySelector('.main');
     content.classList.toggle("transform", window.scrollY > 1);
 })
+
