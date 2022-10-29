@@ -2,6 +2,9 @@
     .list{
         display: none;
     }
+    #burger{
+        display: block;
+    }
 }
 @media(max-width:800px){
     .contact-form{

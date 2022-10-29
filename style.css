@@ -18,6 +18,10 @@ body {
 
 }
 
+li {
+    list-style: none;
+}
+
 .hero {
     height: 100vh;
     max-height: 1200px;
@@ -111,6 +115,7 @@ footer {
     background-color: transparent;
     color: #f9004f;
 }
+.bg #burgrt
 
 .sticky nav a {
     color: var(--pink--text);
@@ -125,7 +130,7 @@ nav {
     padding-bottom: 15px;
     padding-left: 5%;
     padding-right: 5%;
-    transition: 0.7s;
+    transition: 0.9s;
     position: fixed;
     max-width: 1800px;
     margin: auto;
@@ -168,13 +173,55 @@ nav ul li a {
     text-transform: capitalize;
 }
 
+.mblist {
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s ease-in-out inherit;
+    display: none;
+}
+
+.mblist li {
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
 .content {
     position: absolute;
-    top: 40%; 
+    top: 40%;
     width: 100%;
     text-align: center;
 }
 
+#burger {
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+
+#burger li {
+    background-color: #fff;
+    width: 25px;
+    height: 3px;
+    margin: 3px;
+    transition: 0.4s;
+}
+#burger:hover li {
+    background-color: #f9004d;
+    margin: 4px;
+} 
+#mbmenu:hover .burger_1 {
+    background-color: #f9004d;
+    transform: rotate(45deg) translate(3px, 5px); 
+}
+#mbmenu:hover .burger_2 {
+    background-color: #f9004d;
+    opacity: 0.2;
+}
+#mbmenu:hover .burger_3 {
+    background-color: #f9004d;
+    transform: rotate(-45deg) translate(4px, -5px); 
+}
 
 h1 {
     margin: 20px 0px 20px;
@@ -378,10 +425,10 @@ h5 {
     z-index: 3;
 }
 
-.contact-form { 
+.contact-form {
     margin-top: 60px;
     width: 65%;
-    z-index: 3; 
+    z-index: 3;
 }
 
 .form-ul {
@@ -412,9 +459,9 @@ textarea {
     color: #fff;
     letter-spacing: 2px;
     padding: 10px;
-border: none;
-box-shadow: 0px 0px 5px 1px #f9004fd7;
-border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 5px 1px #f9004fd7;
+    border-radius: 20px;
 }
 
 .form-ul li textarea {
@@ -458,7 +505,7 @@ footer p:nth-child(1) {
 
 footer p:nth-child(2) {
     color: #fff;
-    font-size: 17px; 
+    font-size: 17px;
     text-align: center;
     line-height: 25px;
 }
