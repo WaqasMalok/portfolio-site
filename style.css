@@ -104,11 +104,7 @@ footer {
     z-index: 999;
     transition: all 5s ease-in-out inherit;
     position: fixed;
-} 
-.bg .button, #burger li{
-    background-color: #000; 
 }
-
 .bg .button:hover {
     background-color: transparent;
     color: #f9004f;
@@ -132,6 +128,7 @@ footer {
     transition: 0.9s; 
     max-width: 1800px;
     margin: auto;
+    z-index: 99;
 }
 
 nav li a::after {
@@ -170,18 +167,31 @@ nav ul li a {
     font-size: 12px;
     text-transform: capitalize;
 }
-
+#mbnavbar{
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0%;
+    background-color: #191919;
+    width: 100%;
+    height: 100vh;
+    max-height: 1000px;
+    z-index: 3;
+}
 .mblist {
     display: flex;
     flex-direction: column;
     transition: all 0.5s ease-in-out inherit;
-    display: none;
+    width: 80%;
+    margin: auto;
 }
 
-.mblist li {
+.mblist li {margin-top: 30px;
     margin-bottom: 30px;
     text-align: center;
-
+}
+.mblist li a{ 
+    padding: 30px 0px; 
 }
 
 .content {
@@ -190,11 +200,20 @@ nav ul li a {
     width: 100%;
     text-align: center;
 }
-
+.mbmenu .burger_1 { 
+    transform: rotate(45deg) translate(3px, 5px); 
+}
+.mbmenu .burger_2 {
+    opacity: 0.2;
+}
+.mbmenu .burger_3 {
+    transform: rotate(-45deg) translate(4px, -5px); 
+}
 #burger {
     text-align: center;
     cursor: pointer;
     display: none;
+    z-index: 6;
 }
 
 #burger li {
@@ -202,24 +221,15 @@ nav ul li a {
     width: 25px;
     height: 3px;
     margin: 3px;
-    transition: 0.4s;
+    /* transition: 0.2s; */
 }
 #burger:hover li {
     background-color: #f9004d;
-    margin: 4px;
 } 
-#mbmenu:hover .burger_1 {
-    background-color: #f9004d;
-    transform: rotate(45deg) translate(3px, 5px); 
-}
-#mbmenu:hover .burger_2 {
-    background-color: #f9004d;
-    opacity: 0.2;
-}
-#mbmenu:hover .burger_3 {
-    background-color: #f9004d;
-    transform: rotate(-45deg) translate(4px, -5px); 
-}
+#burger:hover .burger_2 {
+    opacity: 0.5;
+} 
+
 
 h1 {
     margin: 20px 0px 20px;
